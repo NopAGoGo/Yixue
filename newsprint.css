@@ -31,13 +31,27 @@
     src: local('PT Serif'), local('PTSerif-BoldItalic'), url('./newsprint/PT_Serif-Web-BoldItalic.ttf')
 }
 
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PingFang Medium'), url(./yixue/PingFang-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: bold;
+    src: local('PingFang Heavy'), url(./yixue/PingFang-Heavy.ttf);
+}
+
 html {
 	font-size: 16px;
 }
 
 html, body {
 	background-color: #f3f2ee;
-	font-family: "PT Serif", 'Times New Roman', Times;
+	font-family: "PT Serif", 'Times New Roman', Times, 'PingFang';
 	color: #1f0909;
 	line-height: 1.5em;
 }
@@ -203,6 +217,7 @@ td {
 
 code,
 .md-fences {
+	font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
 	background-color: #dadada;
 	padding-left: 1ch;
 	padding-right: 1ch;
@@ -320,7 +335,7 @@ hr {
 }
 
 .md-image>.md-meta{
-	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', sans-serif, 'PingFang';
 }
 
 
@@ -427,7 +442,7 @@ hr {
 }
 
 header, .context-menu, .megamenu-content, footer {
-	font-family: "PT Serif", 'Times New Roman', Times;
+	font-family: "PT Serif", 'Times New Roman', Times, 'PingFang';
     color: #1f0909;
 }
 

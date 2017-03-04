@@ -63,6 +63,19 @@
 	font-weight: bold;
 	src: local('Lato BlackItalic'), local('Lato-BlackItalic'), url(./pixyll/Lato-BlackItalic.ttf);
 }
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PingFang Medium'), url(./yixue/PingFang-Medium.ttf);
+}
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: bold;
+    src: local('PingFang Heavy'), url(./yixue/PingFang-Heavy.ttf);
+}
+
 
 h1,
 .h1,
@@ -110,7 +123,7 @@ h4 {
 */
 
 body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "PingFang", Serif;
 	line-height: 1.5rem;
 	font-weight: 400;
 }
@@ -176,7 +189,7 @@ abbr {
 }
 pre,
 code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
+	font-family: Menlo, Monaco, "Courier New", monospace,"PingFang";
 }
 
 code,
@@ -224,7 +237,7 @@ h5,
 .h5,
 h6,
 .h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: "Lato", 'Helvetica Neue', Helvetica, "PingFang", sans-serif;
 	font-weight: 900;
 	line-height: 1.2;
 	margin: 1em 0 0.5em;
@@ -333,7 +346,7 @@ a {
 	line-height: 1.5em;
 	color: #7a7a7a;
 	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, "PingFang", sans-serif;
 	font-weight: 300;
 	clear: both;
 	padding-left: 0;
@@ -346,7 +359,7 @@ a {
 	font-size:1.1rem;
 }
 .md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, "PingFang", sans-serif;
 }
 .code-tooltip {
 	background: white;
@@ -464,7 +477,7 @@ a {
 
 /** source code mode */
 #typora-source {
-	font-family: Courier, monospace;
+	font-family: Courier, monospace,"PingFang";
     color: #6A6A6A;
 }
 

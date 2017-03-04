@@ -1,5 +1,19 @@
 @import "night/mermaid.dark.css";
 
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PingFang Medium'), url(./yixue/PingFang-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'PingFang';
+    font-style: normal;
+    font-weight: bold;
+    src: local('PingFang Heavy'), url(./yixue/PingFang-Heavy.ttf);
+}
+
 html {
     font-size: 16px;
 }
@@ -44,7 +58,7 @@ select,
 textarea {
     font-style: normal;
     line-height: 1.625rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "PingFang";
 }
 
 hr {
@@ -59,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lucida Grande", "Corbal", Georgia, serif;
+    font-family: "Lucida Grande", "Corbal", Georgia, serif, "PingFang";
     font-weight: normal;
     clear: both;
     -ms-word-wrap: break-word;
@@ -275,7 +289,7 @@ tt,
 var {
     background: rgba(0, 0, 0, 0.05);
     font-size: 0.875rem;
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace, "PingFang";
 }
 
 pre.md-fences {
