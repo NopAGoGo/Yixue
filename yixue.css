@@ -1,12 +1,12 @@
+/*设置编码*/
 @charset "UTF-8";
-
+/*导入苹方字体*/
 @font-face {
     font-family: 'PingFang';
     font-style: normal;
     font-weight: normal;
     src: local('PingFang Medium'), url(./yixue/PingFang-Medium.ttf);
 }
-
 @font-face {
     font-family: 'PingFang';
     font-style: normal;
@@ -14,55 +14,59 @@
     src: local('PingFang Heavy'), url(./yixue/PingFang-Heavy.ttf);
 }
 
+/*设置字号*/
 html {
     font-size: 16px;
 }
 
+/*设置字体、颜色与行高*/
 body {
-    font-family: "PingFang";
+    font-family: "PingFang", serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
 
+/*#write即为主界面*/
+/*设置输入界面宽度与四周留白宽度*/
 #write{
     max-width: 860px;
   	margin: 0 auto;
-  	padding: 20px 30px 40px 30px;
-	padding-top: 20px;
-    padding-bottom: 100px;
+    padding: 20px 30px 100px;
 }
+
+/*hack文章ul或ol起手的情况，为其设置上下30px的留白*/
 #write > ul:first-child,
 #write > ol:first-child{
     margin-top: 30px;
 }
 
+/*这个其实没什么用，留着好了*/
 body > *:first-child {
     margin-top: 0 !important;
 }
 body > *:last-child {
     margin-bottom: 0 !important;
 }
+
+/*设置超链颜色*/
 a {
     color: #4183C4;
 }
+
+/*设置标题除h3外粗体*/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
 }
 h3 {
     font-weight: normal;
 }
 
-
+/*超链去下划线*/
 h1:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,
@@ -72,6 +76,8 @@ h6:hover a.anchor {
     /*background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;*/
     text-decoration: none;
 }
+
+/*标题中含有代码等情况*/
 h1 tt,
 h1 code {
     font-size: inherit;
@@ -96,32 +102,8 @@ h6 tt,
 h6 code {
     font-size: inherit;
 }
-h1 {
-    padding-bottom: .3em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    /*border-bottom: 1px solid #eee;*/
-}
-h2 {
-    padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    /*border-bottom: 1px solid #eee;*/
-}
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
+
+/*以下元素的留白*/
 p,
 blockquote,
 ul,
@@ -131,87 +113,54 @@ table{
     /*margin: 0.8em 0;*/
     margin: 1.2em 0;
 }
+
+/*子列表去留白*/
 li>ol,
 li>ul {
     margin: 0 0;
 }
-hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-}
 
-body > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h3:first-child,
-body > h4:first-child,
-body > h5:first-child,
-body > h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-a:first-child h1,
-a:first-child h2,
-a:first-child h3,
-a:first-child h4,
-a:first-child h5,
-a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-}
-h1 p,
-h2 p,
-h3 p,
-h4 p,
-h5 p,
-h6 p {
-    margin-top: 0;
-}
-li p.first {
-    display: inline-block;
-}
+/*列表留白*/
 ul,
 ol {
     padding-left: 30px;
 }
+
+/*note列表去留白*/
 ul:first-child,
 ol:first-child {
     margin-top: 0;
 }
+
+/*note列表去留白*/
 ul:last-child,
 ol:last-child {
     margin-bottom: 0;
 }
+
+/*note样式*/
 blockquote {
-    border-left: 4px solid #dddddd;
-    padding: 0 15px;
-    color: #777777;
+  background-color: rgba(144, 144, 144, 0.05);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 20px;
+  border-left: 4px solid #dddddd;
 }
-blockquote blockquote {
-    padding-right: 0;
-}
+
+/*表格样式*/
 table {
     padding: 0;
     word-break: initial;
 }
+table thead.md-table-edit {
+    background-color: transparent;
+}
+table thead {
+    background-color: #eeeeee;
+}
 table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
+    /*border-top: 1px solid #cccccc;*/
+    /*background-color: white;*/
     margin: 0;
     padding: 0;
 }
@@ -220,13 +169,13 @@ table tr:nth-child(2n) {
 }
 table tr th {
     font-weight: bold;
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
 table tr td {
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     text-align: left;
     margin: 0;
     padding: 6px 13px;
@@ -240,19 +189,19 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
+/*代码行样式*/
 .CodeMirror-gutters {
     border-right: 1px solid #ddd;
 }
 
+/*代码样式*/
 .md-fences,
 code,
 tt {
-    border: 1px solid #ddd;
     background-color: #f8f8f8;
     border-radius: 3px;
-    padding: 0;
     font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-    padding: 2px 4px 0px 4px;
+    padding: 2px 4px 0 4px;
     font-size: 0.9em;
 }
 
@@ -263,6 +212,8 @@ tt {
     padding-top: 8px;
     padding-bottom: 6px;
 }
+
+/*任务列表*/
 .task-list{
 	padding-left: 0;
 }
@@ -333,7 +284,7 @@ tt {
     border: 1px solid #ddd;
     border-radius: 3px;
     font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-    padding: 2px 4px 0px 4px;
+    padding: 2px 4px 0 4px;
     font-size: 0.9em;
     color: inherit;
 }
@@ -369,7 +320,7 @@ tt {
 }
 
 header, .context-menu, .megamenu-content, footer {
-    font-family: "PingFang";
+    font-family: "PingFang", serif;
 }
 
 /** source code mode */
