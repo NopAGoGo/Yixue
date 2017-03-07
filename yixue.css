@@ -99,11 +99,11 @@ a {
 }
 
 blockquote {
-  background-color: rgba(144, 144, 144, 0.05);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 1rem 1rem;
-  border-left: 6px solid #dddddd;
+    background-color: rgba(144, 144, 144, 0.05);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 1rem;
+    border-left: 6px solid #dddddd;
 }
 
 /*blockquote {
@@ -127,7 +127,8 @@ table thead.md-table-edit {
 }
 
 table thead {
-    background-color: #eeeeee;!important;
+    background-color: #eeeeee;
+!important;
 }
 
 table.md-table td {
@@ -180,7 +181,7 @@ table tr td:last-child {
 code {
     background-color: #f8f8f8;
     border-radius: 3px;
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
     padding: 2px 4px 0 4px;
     font-size: 0.9rem;
 }
@@ -197,15 +198,15 @@ code {
     position: static;
 }
 
-.task-list{
+.task-list {
     padding-left: 0;
 }
 
 .task-list-item {
-    padding-left:34px;
+    padding-left: 34px;
 }
 
-.task-list-item input[type="checkbox"]{
+.task-list-item input[type="checkbox"] {
     width: 1.25rem;
     height: 1.25rem;
     display: block;
@@ -213,12 +214,12 @@ code {
     top: -2px;
 }
 
-.task-list-item input[type="checkbox"]:focus{
+.task-list-item input[type="checkbox"]:focus {
     outline: none;
     box-shadow: none;
 }
 
-.task-list-item input[type="checkbox"]:before{
+.task-list-item input[type="checkbox"]:before {
     border: 1px solid #555;
     border-radius: 1.5rem;
     width: 1.25rem;
@@ -230,10 +231,10 @@ code {
 }
 
 .task-list-item input:checked:before,
-.task-list-item input[checked]:before{
+.task-list-item input[checked]:before {
     background: #333;
     border-width: 2px;
-    display:inline-block;
+    display: inline-block;
     transition: background-color 200ms ease-in-out;
 }
 
@@ -261,25 +262,26 @@ code {
     content: ' ';
     opacity: 0;
 }
+
 /** source code mode */
 .cm-s-typora-default .cm-overlay {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 .cm-s-typora-default .cm-table-row,
 .cm-s-typora-default .cm-block-start {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 .cm-s-typora-default .cm-comment,
 .cm-s-typora-default .cm-code {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 .cm-s-typora-default .cm-trailing-space-new-line:after,
 .cm-startspace:after,
 .cm-starttab .cm-tab:after {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 .cm-startspace, .cm-tab,
@@ -287,11 +289,11 @@ code {
 .cm-trailing-space-a,
 .cm-trailing-space-b,
 .cm-trailing-space-new-line {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 .CodeMirror-lint-tooltip {
-    font-family: Consolas, monospace, "PingFang";
+    font-family: Consolas, "PingFang", monospace;
 }
 
 /*@media screen and (min-width: 48em) {
@@ -310,9 +312,9 @@ code {
     }
 }*/
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 #typora-quick-open {
