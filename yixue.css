@@ -1,12 +1,12 @@
-/*设置编码*/
 @charset "UTF-8";
-/*导入苹方字体*/
+
 @font-face {
     font-family: 'PingFang';
     font-style: normal;
     font-weight: normal;
     src: local('PingFang Medium'), url(./yixue/PingFang-Medium.ttf);
 }
+
 @font-face {
     font-family: 'PingFang';
     font-style: normal;
@@ -14,284 +14,301 @@
     src: local('PingFang Heavy'), url(./yixue/PingFang-Heavy.ttf);
 }
 
-/*设置字号*/
 html {
     font-size: 16px;
+    color: #333;
 }
 
-/*设置字体、颜色与行高*/
 body {
-    font-family: "PingFang", serif;
-    color: rgb(51, 51, 51);
+    font-family: 'PingFang', sans-serif;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-/*#write即为主界面*/
-/*设置输入界面宽度与四周留白宽度*/
-#write{
+*.in-text-selection,
+::selection {
+    background: #B5D6FC;
+    text-shadow: none;
+}
+
+#write {
+    word-break: normal;
+    word-wrap: break-word;
     max-width: 860px;
-  	margin: 0 auto;
-    padding: 20px 30px 100px;
+    padding: 20px 10px 100px;
 }
 
-/*hack文章ul或ol起手的情况，为其设置上下30px的留白*/
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-/*这个其实没什么用，留着好了*/
-body > *:first-child {
+pre.md-meta-block {
+    font-family: "PingFang", serif;
+    padding: 2rem;
+    line-height: 1.2rem;
+    border-radius: 3px;
     margin-top: 0 !important;
-}
-body > *:last-child {
-    margin-bottom: 0 !important;
+    min-height: 30px;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    color: #999;
+
+    margin-bottom: 2rem;
 }
 
-/*设置超链颜色*/
-a {
-    color: #4183C4;
+h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
 }
 
-/*设置标题除h3外粗体*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2.285714rem;
+    margin-bottom: 1.15rem;
 }
+
 h3 {
+    font-size: 1.6rem;
     font-weight: normal;
+    margin-top: 2.285714rem;
+    margin-bottom: 1.15rem;
 }
 
-/*超链去下划线*/
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    /*background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;*/
-    text-decoration: none;
+h4 {
+    font-size: 1.4rem;
+    margin-top: 2.67rem;
 }
 
-/*标题中含有代码等情况*/
-h1 tt,
-h1 code {
-    font-size: inherit;
+h5 {
+    font-size: 1.2rem;
 }
-h2 tt,
-h2 code {
-    font-size: inherit;
+
+h6 {
+    font-size: 1rem;
 }
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
 h6 code {
     font-size: inherit;
 }
 
-/*以下元素的留白*/
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    /*margin: 0.8em 0;*/
-    margin: 1.2em 0;
+a {
+    cursor: pointer;
+    color: #4183C4;
+    text-decoration: none;
 }
 
-/*子列表去留白*/
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-
-/*列表留白*/
-ul,
-ol {
-    padding-left: 30px;
-}
-
-/*note列表去留白*/
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-
-/*note列表去留白*/
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-
-/*note样式*/
 blockquote {
   background-color: rgba(144, 144, 144, 0.05);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 0 20px;
-  border-left: 4px solid #dddddd;
+  padding: 1rem 1rem;
+  border-left: 6px solid #dddddd;
 }
 
-/*表格样式*/
+/*blockquote {
+padding-top: 60px;
+}
+*/
 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    overflow: auto;
+    page-break-inside: auto;
+    text-align: left;
     padding: 0;
     word-break: initial;
+    margin: 2rem 0 1.25rem;
 }
+
 table thead.md-table-edit {
     background-color: transparent;
 }
+
 table thead {
-    background-color: #eeeeee;
+    background-color: #eeeeee;!important;
 }
+
+table.md-table td {
+    min-width: 80px;
+}
+
 table tr {
-    /*border-top: 1px solid #cccccc;*/
-    /*background-color: white;*/
     margin: 0;
     padding: 0;
 }
-table tr:nth-child(2n) {
-    background-color: #f8f8f8;
+
+table tbody tr:nth-child(1n) {
+    background-color: #fbfbfb;
 }
+
+table tbody tr:nth-child(2n) {
+    background-color: #f4f4f4;
+}
+
 table tr th {
     font-weight: bold;
-    /*border: 1px solid #cccccc;*/
     text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
+
 table tr td {
     /*border: 1px solid #cccccc;*/
     text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
+
 table tr th:first-child,
 table tr td:first-child {
     margin-top: 0;
 }
+
 table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
 }
 
-/*代码行样式*/
 .CodeMirror-gutters {
     border-right: 1px solid #ddd;
 }
 
 /*代码样式*/
 .md-fences,
-code,
-tt {
+code {
     background-color: #f8f8f8;
     border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
+    font-family: Consolas, monospace, "PingFang";
     padding: 2px 4px 0 4px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .md-fences {
     margin-bottom: 15px;
     margin-top: 15px;
-    padding: 0.2em 1em;
+    padding: 0.2rem 1rem;
     padding-top: 8px;
     padding-bottom: 6px;
 }
 
-/*任务列表*/
+.task-list-item .code-tooltip input.mode {
+    position: static;
+}
+
 .task-list{
-	padding-left: 0;
+    padding-left: 0;
 }
 
 .task-list-item {
-	padding-left:32px;
+    padding-left:34px;
 }
 
-.task-list-item input {
-  top: 3px;
-  left: 8px;
+.task-list-item input[type="checkbox"]{
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    -webkit-appearance: initial;
+    top: -2px;
 }
 
-@media screen and (min-width: 914px) {
-    /*body {
-        width: 854px;
-        margin: 0 auto;
-    }*/
+.task-list-item input[type="checkbox"]:focus{
+    outline: none;
+    box-shadow: none;
 }
-@media print {
+
+.task-list-item input[type="checkbox"]:before{
+    border: 1px solid #555;
+    border-radius: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #fff;
+    content: ' ';
+    transition: background-color 200ms ease-in-out;
+    display: block;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+    background: #333;
+    border-width: 2px;
+    display:inline-block;
+    transition: background-color 200ms ease-in-out;
+}
+
+.task-list-item input:checked:after,
+.task-list-item input[checked]:after {
+    opacity: 1;
+}
+
+.task-list-item input:after {
+    opacity: 1;
+    -webkit-transition: opacity 0.05s ease-in-out;
+    -moz-transition: opacity 0.05s ease-in-out;
+    transition: opacity 0.05s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0.3rem;
+    left: 0.18rem;
+    width: 0.9rem;
+    height: 0.5rem;
+    border: 3px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 0;
+}
+/** source code mode */
+.cm-s-typora-default .cm-overlay {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+.cm-s-typora-default .cm-table-row,
+.cm-s-typora-default .cm-block-start {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+.cm-s-typora-default .cm-comment,
+.cm-s-typora-default .cm-code {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+.cm-s-typora-default .cm-trailing-space-new-line:after,
+.cm-startspace:after,
+.cm-starttab .cm-tab:after {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+.cm-startspace, .cm-tab,
+.cm-starttab,
+.cm-trailing-space-a,
+.cm-trailing-space-b,
+.cm-trailing-space-new-line {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+.CodeMirror-lint-tooltip {
+    font-family: Consolas, monospace, "PingFang";
+}
+
+/*@media screen and (min-width: 48em) {
     html {
-        font-size: 13px;
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
+        background-color: blue;
     }
 }
-
-.md-fences {
-	background-color: #f8f8f8;
+@media (max-width: 48em) {
+    html {
+        background-color: red;
+    }
 }
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-    padding: 2px 4px 0 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag{
-	color: inherit;
-}
+@media screen and (min-width: 64em) {
+    html {
+        background-color: green;
+    }
+}*/
 
 .md-toc { 
     margin-top:20px;
@@ -323,35 +340,7 @@ header, .context-menu, .megamenu-content, footer {
     font-family: "PingFang", serif;
 }
 
-/** source code mode */
-.cm-s-typora-default .cm-overlay {
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-}
-
-.cm-s-typora-default .cm-table-row, 
-.cm-s-typora-default .cm-block-start{
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-}
-
-.cm-s-typora-default .cm-comment,
-.cm-s-typora-default .cm-code{
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-}
-
-.cm-s-typora-default .cm-trailing-space-new-line:after,
-.cm-startspace:after,
-.cm-starttab .cm-tab:after {
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-}
-
-.cm-startspace, .cm-tab, 
-.cm-starttab,
-.cm-trailing-space-a,
-.cm-trailing-space-b,
-.cm-trailing-space-new-line  {
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
-}
-
-.CodeMirror-lint-tooltip {
-    font-family: Consolas, "Liberation Mono", Courier, monospace ,"PingFang";
+blockquote:before,
+blockquote:after {
+    content: none;
 }
