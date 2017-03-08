@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 @font-face {
     font-family: 'PingFang';
@@ -100,8 +100,8 @@ a {
 
 blockquote {
     background-color: rgba(144, 144, 144, 0.05);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     padding: 1rem 1rem;
     border-left: 6px solid #dddddd;
 }
@@ -127,8 +127,7 @@ table thead.md-table-edit {
 }
 
 table thead {
-    background-color: #eeeeee;
-!important;
+    background-color: #eeeeee;!important;
 }
 
 table.md-table td {
@@ -172,8 +171,29 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
+/*表格圆角*/
+table thead:nth-last-of-type(1) tr th:first-child{
+    border-top-left-radius: 3px;
+}
+
+table thead:nth-last-of-type(1) tr th:last-child{
+    border-top-right-radius: 3px;
+}
+
+table tbody tr:nth-last-of-type(1) td:first-child{
+    border-bottom-left-radius: 3px;
+}
+
+table tbody tr:nth-last-of-type(1) td:last-child{
+    border-bottom-right-radius: 3px;
+}
+
 .CodeMirror-gutters {
     border-right: 1px solid #ddd;
+}
+
+.CodeMirror-linenumber {
+    padding:0 0 0 10px;
 }
 
 /*代码样式*/
